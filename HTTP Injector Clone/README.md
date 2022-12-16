@@ -1,5 +1,7 @@
-### Http Injector UI Clone
-My attempt to clone http injector android app
+# httpinjector_clone
 
-### Status
-Still in progress. I will update readme once it's done
+My attempt to clone Http Injector Android App.
+
+# Status
+Still in progress
+
