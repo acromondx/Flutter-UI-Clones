@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class Course {
+  final String id;
   final String imageUrl;
   final String rating;
   final bool isBookmarked;
@@ -10,6 +11,7 @@ class Course {
   final String sections;
   final String description;
   const Course({
+    required this.id,
     required this.imageUrl,
     required this.rating,
     required this.isBookmarked,

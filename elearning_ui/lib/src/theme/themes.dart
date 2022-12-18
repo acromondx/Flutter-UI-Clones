@@ -25,12 +25,12 @@ class AppTheme {
 
   static ThemeData light() {
     return ThemeData(
-      useMaterial3: true,
+      // useMaterial3: true,
       primaryColor: Colors.green,
       brightness: Brightness.light,
       scaffoldBackgroundColor: Colors.grey[200],
       appBarTheme: const AppBarTheme(
-        shadowColor: Colors.green,
+        shadowColor: Colors.transparent,
         foregroundColor: Colors.green,
         backgroundColor: Colors.white,
         titleTextStyle: TextStyle(
@@ -39,6 +39,12 @@ class AppTheme {
           fontFamily: "Quicksand",
           color: Colors.pink,
         ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            // textStyle: style,
+            minimumSize: const Size(double.infinity, 60),
+            backgroundColor: deepGreen),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
           extendedTextStyle:
@@ -50,6 +56,9 @@ class AppTheme {
           backgroundColor: Colors.white,
           selectedItemColor: deepGreen,
           unselectedItemColor: lightGrey,
+          selectedLabelStyle: lightTextTheme.headline2!.copyWith(fontSize: 14),
+          unselectedLabelStyle:
+              lightTextTheme.headline2!.copyWith(fontSize: 14),
           type: BottomNavigationBarType.fixed),
       textTheme: lightTextTheme,
     );
