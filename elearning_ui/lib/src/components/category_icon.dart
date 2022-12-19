@@ -17,7 +17,13 @@ class CategoryIcons extends StatelessWidget {
         Container(
             height: 60,
             width: 60,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey[600]!,
+                  blurStyle: BlurStyle.outer,
+                )
+              ],
               color: Colors.white,
               shape: BoxShape.circle,
             ),

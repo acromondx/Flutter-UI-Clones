@@ -1,5 +1,6 @@
-import 'package:elearning_ui/theme/colors.dart';
 import 'package:flutter/material.dart';
+
+import 'colors.dart';
 
 class AppTheme {
   // 1
@@ -7,10 +8,11 @@ class AppTheme {
     headline1: TextStyle(
       fontFamily: "Quicksand",
       fontSize: 16.0,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
     headline2: TextStyle(
+      fontWeight: FontWeight.w600,
       fontFamily: "Quicksand",
       fontSize: 16.0,
       color: Colors.black,
@@ -26,17 +28,15 @@ class AppTheme {
   static ThemeData light() {
     return ThemeData(
       // useMaterial3: true,
-      primaryColor: Colors.green,
+      // primaryColor: Colors.green,
       brightness: Brightness.light,
       scaffoldBackgroundColor: Colors.grey[200],
       appBarTheme: const AppBarTheme(
         shadowColor: Colors.transparent,
-        foregroundColor: Colors.green,
         backgroundColor: Colors.white,
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20,
-          fontFamily: "Quicksand",
           color: Colors.pink,
         ),
       ),
@@ -54,7 +54,7 @@ class AppTheme {
           elevation: 5),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
-          selectedItemColor: deepGreen,
+          selectedItemColor: deepGreen2,
           unselectedItemColor: lightGrey,
           selectedLabelStyle: lightTextTheme.headline2!.copyWith(fontSize: 14),
           unselectedLabelStyle:

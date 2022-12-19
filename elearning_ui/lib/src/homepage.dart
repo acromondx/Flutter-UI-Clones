@@ -1,9 +1,8 @@
-import 'package:elearning_ui/screens/course_detail/course_detail_screen.dart';
-import 'package:elearning_ui/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:iconly/iconly.dart';
 
-import 'theme/colors.dart';
+import 'screens/course_detail/course_detail_screen.dart';
+import 'screens/home/home_screen.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -43,33 +42,25 @@ class HomepageState extends State<Homepage> {
               Theme.of(context).textSelectionTheme.selectionColor,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              activeIcon: SvgPicture.asset("images/home.svg", color: deepGreen),
-              icon: SvgPicture.asset("images/home.svg"),
+              icon: Icon(IconlyLight.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              activeIcon:
-                  SvgPicture.asset("images/video-circle.svg", color: deepGreen),
-              icon: SvgPicture.asset("images/video-circle.svg"),
+              icon: Icon(IconlyLight.play),
               label: 'Courses',
             ),
             BottomNavigationBarItem(
-              activeIcon: SvgPicture.asset("images/cart.svg", color: deepGreen),
-              icon: SvgPicture.asset("images/cart.svg"),
+              icon: Icon(IconlyLight.buy),
               label: 'Cart',
             ),
             BottomNavigationBarItem(
-              activeIcon:
-                  SvgPicture.asset("images/message.svg", color: deepGreen),
-              icon: SvgPicture.asset("images/message.svg"),
+              icon: Icon(IconlyLight.chat),
               label: 'Inbox',
             ),
             BottomNavigationBarItem(
-              activeIcon:
-                  SvgPicture.asset("images/profile.svg", color: deepGreen),
-              icon: SvgPicture.asset("images/profile.svg"),
+              icon: Icon(IconlyLight.profile),
               label: 'Profile',
             ),
           ],

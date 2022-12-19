@@ -11,6 +11,8 @@ class VerticalBarDecoration extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline1;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.baseline,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -18,7 +20,7 @@ class VerticalBarDecoration extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(title, style: Theme.of(context).textTheme.headline1),
+            Text(title, style: textStyle),
             const SizedBox(
               width: 6,
             ),
@@ -27,7 +29,7 @@ class VerticalBarDecoration extends StatelessWidget {
         ),
         Text(
           "..",
-          style: Theme.of(context).textTheme.headline1!.copyWith(fontSize: 30),
+          style: textStyle!.copyWith(fontSize: 30),
         )
       ],
     );

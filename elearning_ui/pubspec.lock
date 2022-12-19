@@ -81,6 +81,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  iconly:
+    dependency: "direct main"
+    description:
+      name: iconly
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  iconsax:
+    dependency: "direct main"
+    description:
+      name: iconsax
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.8"
   lints:
     dependency: transitive
     description:

@@ -1,17 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:badges/badges.dart';
-import 'package:elearning_ui/components/category_icon.dart';
-import 'package:elearning_ui/components/course_infocard.dart';
-import 'package:elearning_ui/components/info_chip.dart';
-import 'package:elearning_ui/components/search_box.dart';
-import 'package:elearning_ui/components/verticalbar_decoration.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:iconly/iconly.dart';
 
-import 'package:elearning_ui/theme/colors.dart';
-
+import '../../components/category_icon.dart';
+import '../../components/courses_slider.dart';
+import '../../components/info_chip.dart';
+import '../../components/search_box.dart';
+import '../../components/verticalbar_decoration.dart';
 import '../../data/category_data.dart';
-import '../../data/course_data.dart';
+import '../../theme/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,9 +17,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(children: [
-        Column(children: [
-          SizedBox(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(40),
+          child: SizedBox(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
@@ -47,18 +46,52 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Badge(
-                      child: SvgPicture.asset(
-                        "images/notification.svg",
-                      ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                            padding: const EdgeInsets.all(7),
+                            margin: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade300,
+                                  spreadRadius: 2,
+                                  blurStyle: BlurStyle.outer,
+                                ),
+                              ],
+                            ),
+                            child: const Icon(
+                              IconlyLight.notification,
+                              size: 26,
+                            )),
+                        Positioned(
+                          top: 0,
+                          right: 2,
+                          child: Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ]),
             ),
           ),
+        ),
+      ),
+      body: ListView(children: [
+        Column(children: [
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-                color: Colors.grey[50],
+                color: Colors.grey[100],
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20))),
@@ -87,27 +120,10 @@ class HomeScreen extends StatelessWidget {
                     child:
                         InfoChip(title: 'Your Topics', titleColor: deepGreen),
                   ),
-                  SizedBox(
-                    height: 230,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: coursesData.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return CourseInfoCard(
-                          id: coursesData[index].id,
-                          rating: coursesData[index].rating,
-                          title: coursesData[index].courseTitle,
-                          subtitle: coursesData[index].subtitle,
-                          price: coursesData[index].price,
-                          imageUrl: coursesData[index].imageUrl,
-                          isBookmarked: coursesData[index].isBookmarked,
-                          child: const InfoChip(
-                              title: '50% discount', titleColor: Colors.pink),
-                        );
-                      },
-                    ),
-                  ),
+                  const CoursesSlider(),
+                  const SizedBox(height: 10),
+                  VerticalBarDecoration(title: 'Trending courses'),
+                  const CoursesSlider(isReversed: true),
                 ],
               ),
             ),

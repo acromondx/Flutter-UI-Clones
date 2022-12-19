@@ -1,14 +1,15 @@
-import 'package:elearning_ui/screens/course_detail/course_detail_screen.dart';
-import 'package:elearning_ui/theme/themes.dart';
 import 'package:flutter/material.dart';
 
-import 'homepage.dart';
+import 'src/homepage.dart';
+import 'src/screens/course_detail/course_detail_screen.dart';
+import 'src/theme/themes.dart';
 
 void main() {
   final light = AppTheme.light();
 
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Elearning App',
       theme: light,
       home: const Homepage(),
       routes: {

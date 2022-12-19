@@ -1,18 +1,21 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 
-import 'package:elearning_ui/screens/course_detail/course_detail_screen.dart';
-import 'package:elearning_ui/theme/colors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../screens/course_detail/course_detail_screen.dart';
+import '../theme/colors.dart';
+import 'info_chip.dart';
 
 class CourseInfoCard extends StatelessWidget {
-  final String id;
+  String? id;
   final String imageUrl;
   final String rating;
   final String title;
-  final String subtitle;
+  final String instructor;
   final String price;
   final bool isBookmarked;
+  final String infoChipTitle;
+  final Color infoChipColor;
   Widget child;
   CourseInfoCard({
     Key? key,
@@ -20,9 +23,11 @@ class CourseInfoCard extends StatelessWidget {
     required this.imageUrl,
     required this.rating,
     required this.title,
-    required this.subtitle,
+    required this.instructor,
     required this.price,
     required this.isBookmarked,
+    required this.infoChipTitle,
+    required this.infoChipColor,
     this.child = const SizedBox(),
   }) : super(key: key);
 
@@ -85,8 +90,8 @@ class CourseInfoCard extends StatelessWidget {
                                       fontSize: 15,
                                     ),
                               ),
-                              Icon(Icons.star,
-                                  size: 15, color: Colors.amber[800])
+                              Icon(IconlyBold.star,
+                                  size: 15, color: Colors.yellow[800])
                             ],
                           ),
                         ),
@@ -101,21 +106,10 @@ class CourseInfoCard extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: (isBookmarked)
-                                ? SvgPicture.asset(
-                                    "images/heart-filled.svg",
-                                    color: Colors.red,
-                                    height: 15,
-                                    width: 15,
-                                  )
-                                : SvgPicture.asset(
-                                    "images/heart.svg",
-                                    color: Colors.red,
-                                    height: 15,
-                                    width: 15,
-                                  ),
-                            // child: (isBookmarked)
-                            //     ? const Icon(Icons.favorite)
-                            //     : const Icon(Icons.favorite_border),
+                                ? const Icon(IconlyBold.heart,
+                                    color: Colors.red, size: 15)
+                                : const Icon(IconlyLight.heart,
+                                    color: Colors.red, size: 15),
                           )),
                     ),
                   ],
@@ -126,7 +120,7 @@ class CourseInfoCard extends StatelessWidget {
                   Theme.of(context).textTheme.headline1!.copyWith(fontSize: 14),
             ),
             Text(
-              subtitle,
+              instructor,
               style: Theme.of(context)
                   .textTheme
                   .headline1!
@@ -143,7 +137,7 @@ class CourseInfoCard extends StatelessWidget {
                       .copyWith(color: deepGreen),
                 ),
                 const SizedBox(width: 5),
-                child
+                InfoChip(title: infoChipTitle, titleColor: infoChipColor),
               ],
             )
           ],

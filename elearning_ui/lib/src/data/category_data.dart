@@ -1,4 +1,4 @@
-import 'package:elearning_ui/screens/model/category.dart';
+import '../model/category.dart';
 
 const categoryData = [
   Category(category: "Development", emoji: "💻"),
