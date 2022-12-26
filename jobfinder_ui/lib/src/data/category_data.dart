@@ -20,11 +20,11 @@ const categoryData = [
       icon: "assets/svg/category_icons/status-up.svg",
       iconColor: Colors.indigo),
   Category(
-      category: "Marketing",
+      category: "Data",
       icon: "assets/svg/category_icons/command.svg",
       iconColor: Colors.pink),
   Category(
-      category: "Design \nDevelopment",
+      category: "Research",
       icon: "assets/svg/category_icons/microscope.svg",
       iconColor: Colors.cyan),
   Category(

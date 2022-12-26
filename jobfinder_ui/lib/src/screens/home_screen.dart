@@ -54,6 +54,8 @@ class Home extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         MaterialButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6)),
                           onPressed: () {},
                           color: Colors.white,
                           child: Text(

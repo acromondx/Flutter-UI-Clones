@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
             CircleAvatar(
               radius: 80,
               backgroundColor: Colors.red,
-              child: Image.asset('assets/images/abraham.jpg'),
+              child: ClipOval(child: Image.asset('assets/images/abraham.jpg')),
             ),
             Text('Gideon Acromond',
                 style: textStyle!
