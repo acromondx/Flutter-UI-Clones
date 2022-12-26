@@ -25,16 +25,18 @@ class _SegmentedSliderState extends State<SegmentedSlider> {
       style: const TextStyle().copyWith(
           color: Colors.grey[800], fontSize: 17, fontWeight: FontWeight.bold),
     ),
-    1: Text(
-      'About',
-      textAlign: TextAlign.center,
-      style: const TextStyle().copyWith(
-          color: Colors.grey[800], fontSize: 17, fontWeight: FontWeight.bold),
-    ),
+    1: Text('About',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            color: Colors.grey[800],
+            fontSize: 17,
+            fontWeight: FontWeight.bold)),
   };
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline2!;
+
     List<Widget> sectionContent = [
       ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
@@ -45,13 +47,11 @@ class _SegmentedSliderState extends State<SegmentedSlider> {
             minLeadingWidth: 2,
             leading: Text(
               '•',
-              style:
-                  Theme.of(context).textTheme.headline2!.copyWith(fontSize: 18),
+              style: textStyle.copyWith(fontSize: 18),
             ),
             title: Text(
               jobRequirements[index],
-              style:
-                  Theme.of(context).textTheme.headline2!.copyWith(fontSize: 14),
+              style: textStyle.copyWith(fontSize: 14),
               textAlign: TextAlign.justify,
             ),
           );
@@ -60,7 +60,7 @@ class _SegmentedSliderState extends State<SegmentedSlider> {
       Text(
         loremText,
         textAlign: TextAlign.justify,
-        style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 14),
+        style: textStyle.copyWith(fontSize: 14),
       ),
     ];
 

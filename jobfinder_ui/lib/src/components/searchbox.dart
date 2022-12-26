@@ -15,8 +15,9 @@ class SearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline2!;
     return TextField(
-      style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 18),
+      style: textStyle.copyWith(fontSize: 18),
       decoration: InputDecoration(
         filled: true,
         border: OutlineInputBorder(
@@ -39,7 +40,7 @@ class SearchBox extends StatelessWidget {
           color: Colors.grey,
         ),
         contentPadding: const EdgeInsets.all(15),
-        hintStyle: const TextStyle().copyWith(fontSize: 14),
+        hintStyle: textStyle.copyWith(fontSize: 14),
         hintText: isHome ? 'Search job, company' : 'Search...',
       ),
     );
