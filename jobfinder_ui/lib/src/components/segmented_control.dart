@@ -33,15 +33,6 @@ class _SegmentedSliderState extends State<SegmentedSlider> {
     ),
   };
 
-  static const jobRequirements = [
-    'Bachelor\'s degree or equivalent experience in Computer Science or related field',
-    'Experience maintaining excellent Technical Documentation',
-    'Understanding of REST APIs, the document request model, and offline storage',
-    'Deep experience with Github, automation and Unit Testing (TDD and BDD)',
-    'Experience porting open source libraries from Linux to Nucleus',
-    'Bonus qualifications include experience in any, or all, of the following (none required):'
-  ];
-
   @override
   Widget build(BuildContext context) {
     List<Widget> sectionContent = [
