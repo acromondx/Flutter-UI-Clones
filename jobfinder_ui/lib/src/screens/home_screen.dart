@@ -75,13 +75,13 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: -14,
+                    bottom: -30,
                     right: 0,
                     // alignment: Alignment.bottomRight,
-                    child: Icon(
-                      IconlyBold.profile,
-                      color: Colors.grey.withOpacity(0.5),
-                      size: 180,
+                    child: Image.asset(
+                      'assets/images/image2.png',
+                      width: 180,
+                      height: 200,
                     ),
                   ),
                 ]),

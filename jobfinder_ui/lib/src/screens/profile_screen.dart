@@ -26,7 +26,11 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            const CircleAvatar(radius: 80),
+            CircleAvatar(
+              radius: 80,
+              backgroundColor: Colors.red,
+              child: Image.asset('assets/images/abraham.jpg'),
+            ),
             Text('Gideon Acromond',
                 style: textStyle!
                     .copyWith(fontSize: 24, fontWeight: FontWeight.bold)),

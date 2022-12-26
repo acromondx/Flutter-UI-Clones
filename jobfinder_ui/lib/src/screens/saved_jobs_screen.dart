@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:jobfinder_ui/src/components/custom_appbar.dart';
+import 'package:jobfinder_ui/src/constants.dart';
 
 import '../components/saved_job_card.dart';
 import '../components/selectable_buttons.dart';
@@ -40,7 +41,7 @@ class SavedJobsScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 SelectableButtons(
-                  buttonList: const ['All', 'Design', 'Software', 'Marketing'],
+                  buttonList: savedScreenSelectableButtonText,
                   selectedIndex: 1,
                 ),
               ],

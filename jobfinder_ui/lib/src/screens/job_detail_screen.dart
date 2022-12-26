@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:jobfinder_ui/src/components/custom_appbar.dart';
-import 'package:jobfinder_ui/src/page_navigator.dart';
 
 import '../components/company_logo.dart';
 import '../components/light_icon_box.dart';
@@ -23,9 +22,10 @@ class JobDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         onPrefixTap: () {
-          Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) => const PageNavigator()),
-              (Route route) => false);
+          Navigator.pop(context);
+          // Navigator.of(context).pushAndRemoveUntil(
+          //     MaterialPageRoute(builder: (context) => const PageNavigator()),
+          //     (Route route) => false);
         },
         prefixIcon: IconlyLight.arrow_left_2,
         title: 'Details',
