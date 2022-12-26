@@ -28,7 +28,6 @@ class ProfileScreen extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             CircleAvatar(
               radius: 80,
-              backgroundColor: Colors.red,
               child: ClipOval(child: Image.asset('assets/images/abraham.jpg')),
             ),
             Text('Gideon Acromond',

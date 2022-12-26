@@ -22,7 +22,8 @@ class JobDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         onPrefixTap: () {
-          Navigator.pop(context);
+          Navigator.of(context).pop();
+
           // Navigator.of(context).pushAndRemoveUntil(
           //     MaterialPageRoute(builder: (context) => const PageNavigator()),
           //     (Route route) => false);
