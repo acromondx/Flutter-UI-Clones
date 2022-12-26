@@ -11,20 +11,7 @@ class CourseDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget buildContainer(Widget child) {
-      return Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: Colors.grey),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(10),
-        height: 150,
-        width: 300,
-        child: child,
-      );
-    }
+
 
     final textStyle = Theme.of(context).textTheme.headline1;
 
@@ -70,7 +57,6 @@ class CourseDetailScreen extends StatelessWidget {
                     fontSize: 20, fontWeight: FontWeight.w800),
               ),
               const SizedBox(height: 5),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -97,7 +83,6 @@ class CourseDetailScreen extends StatelessWidget {
               Text('About Course',
                   style: textStyle.copyWith(fontWeight: FontWeight.w800)),
               const SizedBox(height: 5),
-
               Text(
                 selectedCourse.description,
                 style: textStyle.copyWith(
@@ -124,24 +109,6 @@ class CourseDetailScreen extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 90),
-              // buildContainer(
-              //   ListView.builder(
-              //     itemBuilder: (ctx, index) => Column(
-              //       children: [
-              //         ListTile(
-              //           leading: CircleAvatar(
-              //             child: Text('# ${(index + 1)}'),
-              //           ),
-              //           title: Text(
-              //             selectedCourse.sectionLaps[index],
-              //           ),
-              //         ),
-              //         const Divider()
-              //       ],
-              //     ),
-              //     itemCount: selectedCourse.sectionLaps.length,
-              //   ),
-              // ),
             ],
           ),
         ),
