@@ -10,10 +10,7 @@ class ActivityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const AppBarIcon(icon: Icons.grid_view_rounded),
-        title: const Text('Activity'),
-      ),
+      appBar: CustomAppBar(title: 'Activity', showSuffixIcon: false),
       body: Column(children: [
         const SearchBox(showFilterButton: false, isHome: false),
         SelectableButtons(

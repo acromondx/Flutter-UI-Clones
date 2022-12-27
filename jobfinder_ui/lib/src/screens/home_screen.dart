@@ -1,16 +1,15 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:jobfinder_ui/src/components/custom_appbar.dart';
-import 'package:jobfinder_ui/src/components/searchbox.dart';
-
-import 'package:jobfinder_ui/src/components/verticalbar_decoration.dart';
-import 'package:jobfinder_ui/src/data/job_data.dart';
-import 'package:jobfinder_ui/src/theme/colors.dart';
 
 import '../components/category_icon.dart';
+import '../components/custom_appbar.dart';
 import '../components/recent_job_card.dart';
+import '../components/searchbox.dart';
+import '../components/verticalbar_decoration.dart';
 import '../data/category_data.dart';
+import '../data/job_data.dart';
+import '../theme/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -20,7 +19,6 @@ class Home extends StatelessWidget {
     final textStyle = Theme.of(context).textTheme.headline1;
     return Scaffold(
       appBar: CustomAppBar(
-        prefixIcon: Icons.grid_view_rounded,
         title: 'Hi, Gideon',
         suffixIcon: IconlyBold.notification,
       ),

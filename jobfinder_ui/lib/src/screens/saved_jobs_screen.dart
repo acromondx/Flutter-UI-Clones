@@ -19,14 +19,7 @@ class SavedJobsScreen extends StatelessWidget {
     final savedJobs = jobsData.where((job) => job.isSaved == true).toList();
 
     return Scaffold(
-      appBar: AppBar(
-        leading: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: AppBarIcon(icon: Icons.grid_view_rounded),
-        ),
-        title: const Text('Bookmarks'),
-        centerTitle: true,
-      ),
+      appBar: CustomAppBar(title: 'Saved', showSuffixIcon: false),
       body: ListView(
         children: [
           Padding(

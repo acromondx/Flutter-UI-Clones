@@ -1,22 +1,24 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
 import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  // final Job selectedJob;
   final String title;
   final IconData prefixIcon;
-  IconData? suffixIcon;
+  final bool showSuffixIcon;
   final void Function()? onPrefixTap;
-  CustomAppBar({
-    Key? key,
-    // required this.selectedJob,
-    required this.title,
-    this.prefixIcon = Icons.grid_view_rounded,
-    this.suffixIcon,
-    this.onPrefixTap,
-  }) : super(key: key);
+
+  IconData? suffixIcon;
+  CustomAppBar(
+      {Key? key,
+      // required this.selectedJob,
+      required this.title,
+      this.prefixIcon = Icons.grid_view_rounded,
+      this.suffixIcon,
+      this.onPrefixTap,
+      this.showSuffixIcon = true})
+      : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -31,11 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: AppBarIcon(icon: prefixIcon),
         ),
         title: Text(title),
-        actions: [
-          AppBarIcon(
-            icon: suffixIcon!,
-          )
-        ],
+        actions: showSuffixIcon ? [AppBarIcon(icon: suffixIcon!)] : [],
         centerTitle: true,
       ),
     );
