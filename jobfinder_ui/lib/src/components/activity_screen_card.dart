@@ -1,31 +1,37 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:iconly/iconly.dart';
 
 import '../model/job.dart';
 import '../screens/job_detail_screen.dart';
-import '../theme/colors.dart';
 import 'company_logo.dart';
 import 'info_chip.dart';
 import 'svg_icon_mini.dart';
 
-class SavedJobCard extends StatelessWidget {
+class ActivityCard extends StatelessWidget {
   final int id;
   final JobType type;
   final String title;
-  final bool isBookmarked;
+  final String company;
   final String location;
   final String imageUrl;
+  final String salary;
+  // final String chipText;
+  // final Color chipColor;
   final Color imageBackground;
-  const SavedJobCard({
+  const ActivityCard({
     Key? key,
     required this.id,
     required this.type,
     required this.title,
-    required this.isBookmarked,
+    required this.company,
     required this.location,
     required this.imageUrl,
+    required this.salary,
+    // required this.chipText,
+    // required this.chipColor,
     required this.imageBackground,
   }) : super(key: key);
 
@@ -41,12 +47,13 @@ class SavedJobCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final textStyle = Theme.of(context).textTheme.headline2!;
 
-    int randomIndex = Random().nextInt(3);
+    int randomIndex = Random().nextInt(4);
 
     List infoChipTextAndColor = [
-      ['Open', Colors.green],
-      ['Applied', Colors.indigo],
-      ['Closed', Colors.blue]
+      ['Accepted', Colors.green],
+      ['Pending', Colors.amber[600]],
+      ['Rejected', Colors.red],
+      ['Interview', Colors.cyan]
     ];
 
     return GestureDetector(
@@ -62,6 +69,7 @@ class SavedJobCard extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
                 leading: CompanyLogo(
@@ -72,17 +80,16 @@ class SavedJobCard extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 7),
                   child: Text(
-                    title,
+                    company,
                     style: textStyle.copyWith(
                         fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ),
-                trailing: Icon(IconlyBold.bookmark, color: primaryColor),
+                trailing: const Icon(Icons.more_vert, color: Colors.grey),
                 subtitle: Row(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const SvgIconMini(svg: 'location'),
+
                     const SizedBox(width: 5),
                     Text(
                       location,
@@ -90,6 +97,7 @@ class SavedJobCard extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     const SvgIconMini(svg: 'briefcase'),
+                    // const Icon(IconlyLight.bag_2, size: 16),
                     const SizedBox(width: 5),
                     Text(
                       type.text,
@@ -97,22 +105,37 @@ class SavedJobCard extends StatelessWidget {
                     )
                   ],
                 )),
-            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 15, top: 10),
+              child: Text(
+                title,
+                style: textStyle.copyWith(
+                    fontSize: 20, fontWeight: FontWeight.w800),
+              ),
+            ),
+            const SizedBox(height: 7),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Row(
+                    textBaseline: TextBaseline.ideographic,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    children: [
+                      const SvgIconMini(svg: 'dollar'),
+                      const SizedBox(width: 5),
+                      Text('${salary}k/month')
+                    ],
+                  ),
                   InfoChip(
                     title: infoChipTextAndColor[randomIndex][0],
                     titleColor: infoChipTextAndColor[randomIndex][1],
                   ),
-                  InfoChip(
-                      title: '${Random().nextInt(10) + 1} hours ago',
-                      titleColor: Colors.grey[800]!),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 20)
           ],
         ),
       ),

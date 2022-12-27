@@ -57,12 +57,21 @@ class ProfileScreen extends StatelessWidget {
               loremText.substring(0, 180),
               textAlign: TextAlign.left,
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             VerticalBarDecoration(title: 'My Experience', trailing: 'Add New'),
             const SizedBox(height: 20),
-            EmploymentTile(textStyle: textStyle),
-            EmploymentTile(textStyle: textStyle),
-            EmploymentTile(textStyle: textStyle)
+            const EmploymentTile(
+              role: 'Staff Engineer - Google',
+              period: 'April, 2022 - Present',
+            ),
+            const EmploymentTile(
+              role: 'Senior Engineer - Yahoo',
+              period: 'April, 2017 - April, 2022',
+            ),
+            const EmploymentTile(
+              role: 'Data Scientist Engineer - IBM',
+              period: 'Apirl, 2008 - June, 2017',
+            ),
           ]),
         ),
       ),
@@ -71,22 +80,30 @@ class ProfileScreen extends StatelessWidget {
 }
 
 class EmploymentTile extends StatelessWidget {
+  final String role;
+  final String period;
   const EmploymentTile({
     Key? key,
-    required this.textStyle,
+    required this.role,
+    required this.period,
   }) : super(key: key);
-
-  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline2;
+
     return ListTile(
       leading: LightIconBox(
         showTitle: false,
         icon: 'assets/svg/other/briefcase.svg',
       ),
-      title: Text('Upworker', style: textStyle!.copyWith(fontSize: 20)),
-      subtitle: Text('data', style: textStyle!.copyWith(fontSize: 15)),
+      title: Padding(
+        padding: const EdgeInsets.only(bottom: 7),
+        child: Text(role,
+            style:
+                textStyle!.copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
+      ),
+      subtitle: Text(period, style: textStyle.copyWith(fontSize: 15)),
     );
   }
 }

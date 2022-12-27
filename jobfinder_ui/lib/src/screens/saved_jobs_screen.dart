@@ -23,16 +23,16 @@ class SavedJobsScreen extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 15.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 10),
                 Text(
                   'You saved ${savedJobs.length} jobs',
-                  style: textStyle!.copyWith(fontSize: 20),
+                  style: textStyle!.copyWith(fontSize: 22),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 SelectableButtons(
                   buttonList: savedScreenSelectableButtonText,
                   selectedIndex: 1,
@@ -45,7 +45,7 @@ class SavedJobsScreen extends StatelessWidget {
             shrinkWrap: true,
             itemCount: savedJobs.length,
             itemBuilder: (BuildContext context, int index) {
-              return BookmarkedJobCard(
+              return SavedJobCard(
                 id: savedJobs[index].id,
                 type: savedJobs[index].type,
                 title: savedJobs[index].title,

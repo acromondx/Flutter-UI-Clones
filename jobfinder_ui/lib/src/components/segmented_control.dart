@@ -53,7 +53,6 @@ class _SegmentedSliderState extends State<SegmentedSlider> {
             title: Text(
               jobRequirements[index],
               style: textStyle.copyWith(fontSize: 14),
-              textAlign: TextAlign.justify,
             ),
           );
         },

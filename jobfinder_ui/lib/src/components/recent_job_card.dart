@@ -7,6 +7,7 @@ import 'package:iconly/iconly.dart';
 import '../model/job.dart';
 import '../screens/job_detail_screen.dart';
 import 'company_logo.dart';
+import 'svg_icon_mini.dart';
 
 class RecentJobCard extends StatelessWidget {
   final int id;
@@ -62,16 +63,14 @@ class RecentJobCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 13),
                   Row(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Icon(IconlyLight.location, size: 13),
+                      const SvgIconMini(svg: 'location'),
                       Text(
                         ' $location',
                         style: textStyle.copyWith(fontSize: 13),
                       ),
                       const SizedBox(width: 10),
-                      const Icon(IconlyLight.bag_2, size: 16),
+                      const SvgIconMini(svg: 'briefcase'),
                       Text(
                         ' ${type.text}',
                         style: textStyle.copyWith(fontSize: 13),

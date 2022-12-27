@@ -21,7 +21,7 @@ final jobsData = [
     type: JobType.partTime,
     isSaved: true,
     requirements: jobRequirements,
-    salary: '\$20k/month',
+    salary: '20',
   ),
   Job(
     id: 2,
@@ -33,7 +33,7 @@ final jobsData = [
     type: JobType.partTime,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$6k/month',
+    salary: '6',
   ),
   Job(
     id: 3,
@@ -45,7 +45,7 @@ final jobsData = [
     type: JobType.partTime,
     isSaved: true,
     requirements: jobRequirements,
-    salary: '\$5k/month',
+    salary: '5',
   ),
   Job(
     id: 4,
@@ -57,19 +57,19 @@ final jobsData = [
     type: JobType.contract,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$3k/month',
+    salary: '3',
   ),
   Job(
     id: 5,
     imageUrl: 'assets/svg/company_logos/uber.svg',
     imageBackground: const Color.fromARGB(255, 0, 0, 0),
-    company: 'Whatsapp',
+    company: 'Uber',
     location: 'Russia',
     title: 'Snr. Java Engineer',
     type: JobType.fullTime,
     isSaved: true,
     requirements: jobRequirements,
-    salary: '\$10k/month',
+    salary: '10',
   ),
   Job(
     id: 6,
@@ -81,7 +81,7 @@ final jobsData = [
     type: JobType.fullTime,
     isSaved: true,
     requirements: jobRequirements,
-    salary: '\$10k/month',
+    salary: '10',
   ),
   Job(
     id: 7,
@@ -93,7 +93,7 @@ final jobsData = [
     type: JobType.fullTime,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$10k/month',
+    salary: '10',
   ),
   Job(
     id: 8,
@@ -105,7 +105,7 @@ final jobsData = [
     type: JobType.fullTime,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$1k/month',
+    salary: '1',
   ),
   Job(
     id: 9,
@@ -117,19 +117,19 @@ final jobsData = [
     type: JobType.fullTime,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$14k/month',
+    salary: '14',
   ),
   Job(
     id: 10,
     imageUrl: 'assets/svg/company_logos/sass.svg',
     imageBackground: const Color(0xffcc6699),
-    company: 'Wikipedia',
+    company: 'Sass',
     location: 'Russia',
     title: 'Django Developer',
     type: JobType.partTime,
     isSaved: true,
     requirements: jobRequirements,
-    salary: '\$4k/month',
+    salary: '4',
   ),
   Job(
     id: 11,
@@ -141,6 +141,6 @@ final jobsData = [
     type: JobType.contract,
     isSaved: false,
     requirements: jobRequirements,
-    salary: '\$8k/month',
+    salary: '8',
   )
 ];

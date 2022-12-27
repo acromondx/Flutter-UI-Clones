@@ -4,7 +4,8 @@ const activityScreenSelectableButtonText = [
   'All',
   'Accepted',
   'Interview',
-  'Pending'
+  'Pending',
+  'Rejected'
 ];
 final savedScreenSelectableButtonText = [
   'All',

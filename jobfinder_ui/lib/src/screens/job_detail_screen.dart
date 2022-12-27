@@ -59,7 +59,7 @@ class JobDetailScreen extends StatelessWidget {
                       title: selectedJob.location),
                   LightIconBox(
                       icon: 'assets/svg/other/dollar.svg',
-                      title: selectedJob.salary),
+                      title: '\$${selectedJob.salary}k/month'),
                   LightIconBox(
                       icon: 'assets/svg/other/briefcase.svg',
                       title: selectedJob.type.text),
