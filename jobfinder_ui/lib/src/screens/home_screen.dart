@@ -69,11 +69,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: -1,
-                    right: 25,
+                    top: -2,
+                    right: 24,
                     child: CircleAvatar(
-                      backgroundColor: primaryColor.withOpacity(0.9),
-                      radius: 65,
+                      backgroundColor: primaryColor.withOpacity(0.5),
+                      radius: 70,
                     ),
                   ),
                   Positioned(
@@ -94,7 +94,6 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 100,
                 child: ListView.builder(
-                  shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: categoryData.length,
                   itemBuilder: (BuildContext context, int index) {

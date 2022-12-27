@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:jobfinder_ui/src/model/job.dart';
 
+const jobRequirements = [
+  'Bachelor\'s degree or equivalent experience in Computer Science or related field',
+  'Experience maintaining excellent Technical Documentation',
+  'Understanding of REST APIs, the document request model, and offline storage',
+  'Deep experience with Github, automation and Unit Testing (TDD and BDD)',
+  'Experience porting open source libraries from Linux to Nucleus',
+  'Bonus qualifications include experience in any, or all, of the following (none required):'
+];
+
 final jobsData = [
   Job(
     id: 1,
@@ -11,7 +20,7 @@ final jobsData = [
     title: 'Data Scientist',
     type: JobType.partTime,
     isSaved: true,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$20k/month',
   ),
   Job(
@@ -23,7 +32,7 @@ final jobsData = [
     title: 'Product Designer',
     type: JobType.partTime,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$6k/month',
   ),
   Job(
@@ -35,7 +44,7 @@ final jobsData = [
     title: 'PHP Developer',
     type: JobType.partTime,
     isSaved: true,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$5k/month',
   ),
   Job(
@@ -47,7 +56,7 @@ final jobsData = [
     title: 'Javascript Guru',
     type: JobType.contract,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$3k/month',
   ),
   Job(
@@ -59,7 +68,7 @@ final jobsData = [
     title: 'Snr. Java Engineer',
     type: JobType.fullTime,
     isSaved: true,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$10k/month',
   ),
   Job(
@@ -71,7 +80,7 @@ final jobsData = [
     title: 'Backend Engineer',
     type: JobType.fullTime,
     isSaved: true,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$10k/month',
   ),
   Job(
@@ -83,7 +92,7 @@ final jobsData = [
     title: 'Frontend Developer',
     type: JobType.fullTime,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$10k/month',
   ),
   Job(
@@ -95,7 +104,7 @@ final jobsData = [
     title: 'Staff Engineer',
     type: JobType.fullTime,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$1k/month',
   ),
   Job(
@@ -107,7 +116,7 @@ final jobsData = [
     title: 'Mobile Engineer',
     type: JobType.fullTime,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$14k/month',
   ),
   Job(
@@ -119,7 +128,7 @@ final jobsData = [
     title: 'Django Developer',
     type: JobType.partTime,
     isSaved: true,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$4k/month',
   ),
   Job(
@@ -131,7 +140,7 @@ final jobsData = [
     title: 'Machine Learning Engineer',
     type: JobType.contract,
     isSaved: false,
-    requirements: [],
+    requirements: jobRequirements,
     salary: '\$8k/month',
   )
 ];
