@@ -25,6 +25,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline1;
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: AppBar(
@@ -32,7 +34,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           onTap: onPrefixTap,
           child: AppBarIcon(icon: prefixIcon),
         ),
-        title: Text(title),
+        title: Text(
+          title,
+          style: textStyle!.copyWith(fontWeight: FontWeight.w800, fontSize: 23),
+        ),
         actions: showSuffixIcon ? [AppBarIcon(icon: suffixIcon!)] : [],
         centerTitle: true,
       ),

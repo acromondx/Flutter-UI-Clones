@@ -19,24 +19,24 @@ class SegmentedSlider extends StatefulWidget {
 class _SegmentedSliderState extends State<SegmentedSlider> {
   static int initialValue = 0;
 
-  final Map<int, Widget> section = <int, Widget>{
-    0: Text(
-      'Requirements',
-      textAlign: TextAlign.center,
-      style: const TextStyle().copyWith(
-          color: Colors.grey[800], fontSize: 17, fontWeight: FontWeight.bold),
-    ),
-    1: Text('About',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-            color: Colors.grey[800],
-            fontSize: 17,
-            fontWeight: FontWeight.bold)),
-  };
-
   @override
   Widget build(BuildContext context) {
     final textStyle = Theme.of(context).textTheme.headline2!;
+
+    final Map<int, Widget> section = <int, Widget>{
+      0: Text(
+        'Requirements',
+        textAlign: TextAlign.center,
+        style: textStyle.copyWith(
+            fontWeight: FontWeight.w800, fontSize: 17, color: Colors.grey[900]),
+      ),
+      1: Text(
+        'About',
+        textAlign: TextAlign.center,
+        style: textStyle.copyWith(
+            fontWeight: FontWeight.w800, fontSize: 17, color: Colors.grey[900]),
+      ),
+    };
 
     List<Widget> sectionContent = [
       ListView.builder(
