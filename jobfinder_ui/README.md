@@ -1,9 +1,7 @@
-E-learning App UI Clone. Inspired by this uplabs [design](https://www.uplabs.com/posts/job-finder-app-ui-kit-8fdd7eda-d2ab-4c62-9098-90b9fe5d7e1b).
+E-learning App UI Clone. Inspired by this [uplabs design](https://www.uplabs.com/posts/job-finder-app-ui-kit-8fdd7eda-d2ab-4c62-9098-90b9fe5d7e1b).
 
 
 # Screenshots 🥳
-
-## Screenshots
 <table>
   <tr>
     <td>
