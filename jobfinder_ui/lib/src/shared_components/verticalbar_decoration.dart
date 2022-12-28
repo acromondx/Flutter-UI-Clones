@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class VerticalBarDecoration extends StatelessWidget {
+class VerticalBar extends StatelessWidget {
   final String title;
   final String trailing;
   Widget child;
-  VerticalBarDecoration({
+  VerticalBar({
     Key? key,
     required this.title,
     this.trailing = 'See all',

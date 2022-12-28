@@ -52,13 +52,13 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
-            VerticalBarDecoration(title: 'About Me', trailing: ''),
+            VerticalBar(title: 'About Me', trailing: ''),
             Text(
               loremText.substring(0, 180),
               textAlign: TextAlign.left,
             ),
             const SizedBox(height: 20),
-            VerticalBarDecoration(title: 'My Experience', trailing: 'Add New'),
+            VerticalBar(title: 'My Experience', trailing: 'Add New'),
             const SizedBox(height: 20),
             const EmploymentTile(
               role: 'Staff Engineer - Google',

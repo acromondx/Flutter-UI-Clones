@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
             children: [
               const SearchBox(),
               const SizedBox(height: 10),
-              VerticalBarDecoration(title: 'Tips for you'),
+              VerticalBar(title: 'Tips for you'),
               const SizedBox(height: 10),
               Container(
                 height: 170,
@@ -87,7 +87,7 @@ class Home extends StatelessWidget {
                 ]),
               ),
               const SizedBox(height: 20),
-              VerticalBarDecoration(title: 'Category'),
+              VerticalBar(title: 'Category'),
               const SizedBox(height: 20),
               SizedBox(
                 height: 100,
@@ -104,7 +104,7 @@ class Home extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              VerticalBarDecoration(title: 'Recent Jobs'),
+              VerticalBar(title: 'Recent Jobs'),
               const SizedBox(height: 20),
               ListView.separated(
                 physics: const NeverScrollableScrollPhysics(),
