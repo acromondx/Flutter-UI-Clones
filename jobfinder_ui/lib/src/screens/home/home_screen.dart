@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-import '../components/category_icon.dart';
-import '../components/custom_appbar.dart';
-import '../components/recent_job_card.dart';
-import '../components/searchbox.dart';
-import '../components/verticalbar_decoration.dart';
-import '../data/category_data.dart';
-import '../data/job_data.dart';
-import '../theme/colors.dart';
+import '../../data/category_data.dart';
+import '../../data/job_data.dart';
+import '../../shared_components/custom_appbar.dart';
+import '../../shared_components/searchbox.dart';
+import '../../shared_components/verticalbar_decoration.dart';
+import '../../theme/colors.dart';
+import 'components/category_icon.dart';
+import 'components/recent_job_card.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

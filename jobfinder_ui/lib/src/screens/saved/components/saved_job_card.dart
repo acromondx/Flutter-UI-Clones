@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-import '../model/job.dart';
-import '../screens/job_detail_screen.dart';
-import '../theme/colors.dart';
-import 'company_logo.dart';
-import 'info_chip.dart';
-import 'svg_icon_mini.dart';
+import '../../../model/job.dart';
+import '../../../shared_components/company_logo.dart';
+import '../../../shared_components/info_chip.dart';
+import '../../../shared_components/svg_icon_mini.dart';
+import '../../../theme/colors.dart';
+import '../../job_detail/job_detail_screen.dart';
 
 class SavedJobCard extends StatelessWidget {
   final int id;

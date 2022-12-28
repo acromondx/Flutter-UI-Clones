@@ -1,12 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:jobfinder_ui/src/components/custom_appbar.dart';
 
-import '../components/company_logo.dart';
-import '../components/light_icon_box.dart';
-import '../components/segmented_control.dart';
-import '../data/job_data.dart';
+import '../../data/job_data.dart';
+import '../../shared_components/company_logo.dart';
+import '../../shared_components/custom_appbar.dart';
+import '../../shared_components/light_icon_box.dart';
+import 'components/segmented_slider.dart';
 
 class JobDetailScreen extends StatelessWidget {
   static const routeName = '/job-detail-screen';

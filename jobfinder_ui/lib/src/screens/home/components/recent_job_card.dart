@@ -4,10 +4,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-import '../model/job.dart';
-import '../screens/job_detail_screen.dart';
-import 'company_logo.dart';
-import 'svg_icon_mini.dart';
+import '../../../model/job.dart';
+import '../../../shared_components/company_logo.dart';
+import '../../../shared_components/svg_icon_mini.dart';
+import '../../job_detail/job_detail_screen.dart';
 
 class RecentJobCard extends StatelessWidget {
   final int id;

@@ -2,12 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:jobfinder_ui/src/components/custom_appbar.dart';
-import 'package:jobfinder_ui/src/constants.dart';
-
-import '../components/saved_job_card.dart';
-import '../components/selectable_buttons.dart';
-import '../data/job_data.dart';
+import '../../constants.dart';
+import '../../data/job_data.dart';
+import '../../shared_components/custom_appbar.dart';
+import '../../shared_components/selectable_buttons.dart';
+import 'components/saved_job_card.dart';
 
 class SavedJobsScreen extends StatelessWidget {
   const SavedJobsScreen({super.key});

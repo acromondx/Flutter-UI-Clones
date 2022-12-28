@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconly/iconly.dart';
 
-import 'package:jobfinder_ui/src/components/custom_appbar.dart';
-import 'package:jobfinder_ui/src/components/verticalbar_decoration.dart';
-import 'package:jobfinder_ui/src/theme/colors.dart';
-
-import '../components/light_icon_box.dart';
-import '../constants.dart';
+import '../../constants.dart';
+import '../../shared_components/custom_appbar.dart';
+import '../../shared_components/verticalbar_decoration.dart';
+import '../../theme/colors.dart';
+import 'components/employment_tile.dart';
+import 'components/infobox.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -75,67 +75,6 @@ class ProfileScreen extends StatelessWidget {
           ]),
         ),
       ),
-    );
-  }
-}
-
-class EmploymentTile extends StatelessWidget {
-  final String role;
-  final String period;
-  const EmploymentTile({
-    Key? key,
-    required this.role,
-    required this.period,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.headline2;
-
-    return ListTile(
-      leading: LightIconBox(
-        showTitle: false,
-        icon: 'assets/svg/other/briefcase.svg',
-      ),
-      title: Padding(
-        padding: const EdgeInsets.only(bottom: 7),
-        child: Text(role,
-            style:
-                textStyle!.copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
-      ),
-      subtitle: Text(period, style: textStyle.copyWith(fontSize: 15)),
-    );
-  }
-}
-
-class InfoBox extends StatelessWidget {
-  final String text;
-  final String subtext;
-  const InfoBox({
-    Key? key,
-    required this.text,
-    required this.subtext,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.headline2;
-
-    return Container(
-      height: 80,
-      width: 100,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(width: 3, color: Colors.grey[50]!),
-      ),
-      child: Column(children: [
-        Text(text,
-            style:
-                textStyle!.copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
-        const SizedBox(height: 5),
-        Text(subtext, style: textStyle.copyWith(fontSize: 15)),
-      ]),
     );
   }
 }

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:jobfinder_ui/src/theme/colors.dart';
 
-import '../constants.dart';
-import '../data/job_data.dart';
+import '../../../constants.dart';
+import '../../../data/job_data.dart';
 
 class SegmentedSlider extends StatefulWidget {
   const SegmentedSlider({

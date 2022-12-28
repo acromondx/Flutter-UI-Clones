@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'src/page_navigator.dart';
-import 'src/screens/job_detail_screen.dart';
+import 'src/screens/job_detail/job_detail_screen.dart';
 import 'src/theme/themes.dart';
 
 void main() {

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:jobfinder_ui/src/components/activity_screen_card.dart';
-import 'package:jobfinder_ui/src/components/custom_appbar.dart';
-import 'package:jobfinder_ui/src/components/searchbox.dart';
-import 'package:jobfinder_ui/src/components/selectable_buttons.dart';
+
 import 'package:jobfinder_ui/src/constants.dart';
 import 'package:jobfinder_ui/src/data/job_data.dart';
+
+import '../../shared_components/custom_appbar.dart';
+import '../../shared_components/searchbox.dart';
+import '../../shared_components/selectable_buttons.dart';
+import 'components/activity_screen_card.dart';
 
 class ActivityScreen extends StatelessWidget {
   const ActivityScreen({super.key});

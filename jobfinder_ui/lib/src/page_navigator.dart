@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-import 'screens/activity_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/profile_screen.dart';
-import 'screens/saved_jobs_screen.dart';
+import 'screens/activity/activity_screen.dart';
+import 'screens/home/home_screen.dart';
+import 'screens/profile/profile_screen.dart';
+import 'screens/saved/saved_jobs_screen.dart';
 
 class PageNavigator extends StatefulWidget {
   const PageNavigator({super.key});
