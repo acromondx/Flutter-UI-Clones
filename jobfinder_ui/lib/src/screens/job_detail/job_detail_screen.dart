@@ -72,7 +72,7 @@ class JobDetailScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(14),
         child: ElevatedButton(
             onPressed: () {},
             child: Text(
