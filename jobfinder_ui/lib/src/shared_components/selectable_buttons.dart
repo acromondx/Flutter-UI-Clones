@@ -21,7 +21,7 @@ class SelectableButtons extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: buttonList.length,
             itemBuilder: (BuildContext context, int index) {
-              return Buttons(
+              return Button(
                 onTap: () {
                   setState(() {
                     selectedIndex = index;
@@ -43,12 +43,12 @@ class SelectableButtons extends StatelessWidget {
   }
 }
 
-class Buttons extends StatelessWidget {
+class Button extends StatelessWidget {
   final String title;
   final Color color;
   final Color textColor;
   final void Function()? onTap;
-  const Buttons({
+  const Button({
     Key? key,
     required this.title,
     required this.color,
