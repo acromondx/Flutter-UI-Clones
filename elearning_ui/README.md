@@ -1,5 +1,3 @@
-# W.I.P ⛔⛔
-
 ## E-learning App UI Clone. Inspired by this [dribble design](https://www.behance.net/gallery/126270165/E-learning-App).
 
 # Screenshots 🥳
